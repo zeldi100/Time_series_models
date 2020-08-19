@@ -2,14 +2,14 @@
 The use of Time Series tools to predict future movements in the value of two currencies.
 
 ## Background
-- - - 
+
 Most financial institutions and large companies importing and exporting goods globally are always interested in the best action to be taken to get the lowest exchange rate to maximize profits. For this, it is important to be able to understand the future direction and risk of various currencies.
 
 This piece of work applies many time series tools to predict future movements in the value of Canadian Dollar versus the Japanese Yen.
 
 
 ## Time Series Analysis and Forecasting
- - - - 
+
 Historical CAD-JPY exchange rate data was used and time series analysis and modeling applied to determine any predictable behaviour.
 
 1. Hodrick-Prescott filter: Decomposing the settle price into trend and noise. 
@@ -37,8 +37,10 @@ In the short term, the model forecasts a decrease in the value/price of Yen, but
 <img src="Images/garch_forecast.png" width="400" height="300"/>
 </p>
 
-### Linear Regression Forecasting
- - - - 
+The p-values for GARCH and volatility forecasts tend to be much lower than our ARMA/ARIMA return and price forecasts. In particular, here we have all p-values of less than 0.05, except for alpha(2), indicating overall a much better model performance. 
+
+## Linear Regression Forecasting
+
 Use Scikit-Learn linear regression model to predict CAD/JPY returns with *lagged* CAD/JPY futures returns and categorical calendar seasonal effects (e.g., day-of-week or week-of-year seasonal effects)
 
 1. Data preparation (creating returns and lagged returns, and splitting the data into training and testing data)
@@ -53,11 +55,8 @@ Use Scikit-Learn linear regression model to predict CAD/JPY returns with *lagged
 No I will not feel confident using these models for trading.
 
 
+## Files
 
-
-
-### Files
- - - - 
 
 [Time-Series Starter Notebook](time_series_analysis.ipynb)
 
